@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu4</title>
+</head>
+<body>
+<script>
+    class phone{
+        constructor(code,name,hang,price) {
+            this._code = code;
+            this._name = name;
+            this._hang = hang;
+            this._price =price;
+        }
+        getCode(){
+            return this._code;
+        }
+        getName(){
+            return this._name;
+        }
+        getHang(){
+            return this._hang;
+        }
+        getPrice(){
+            return this._price;
+        }
+        toString(){
+            return "mã = " + this._code + ";" +
+                    "Name = " + this._name + ";" +
+                    "Hãng = " + this._hang + ";" +
+                    "Giá = " + this._price ;
+        }
+    }
+    const mobileSamSung = new phone(1,"phone1","SamSung","100$");
+    const mobileIPhone = new phone(2,"phone2","IPhone","110$");
+    const mobileOppo = new phone(3,"phone3","Oppo","90$");
+    mobileSamSung.getCode();
+    mobileSamSung.getName();
+    mobileSamSung.getHang();
+    mobileSamSung.getPrice();
+    mobileSamSung.toString();
+
+    mobileIPhone.getCode();
+    mobileIPhone.getName();
+    mobileIPhone.getHang();
+    mobileIPhone.getPrice();
+    mobileIPhone.toString();
+
+    mobileOppo.getCode();
+    mobileOppo.getName();
+    mobileOppo.getHang();
+    mobileOppo.getPrice();
+    mobileOppo.toString();
+    let phoneArray = [mobileSamSung,mobileOppo,mobileIPhone];
+    function quanLyPhone(myPhone){
+        return myPhone;
+    }
+    quanLyPhone(mobileSamSung);
+    quanLyPhone(mobileIPhone);
+    quanLyPhone(mobileOppo);
+    function sapXep(array){
+        array.sort(function (a,b){
+            return a.getName().localeCompare(b.getName());
+        });
+        return array;
+    }
+    sapXep(phoneArray);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu2</title>
+</head>
+<body>
+<script>
+    function countUpperCaseStrings(arrayString) {
+        let countStringUpperCase = 0;
+        for (let i = 0; i < arrayString.length; i++) {
+            if (arrayString[i] === arrayString[i].toUpperCase()) {
+                countStringUpperCase++;
+            }
+        }
+        if (countStringUpperCase === 0) {
+            alert("The Strings do not contain any upper case characters.");
+        } else {
+            console.log( countStringUpperCase );
+        }
+    }
+    let newArray = ["a","B","c","D"];
+    countUpperCaseStrings(newArray);
+</script>
+</body>
+</html>

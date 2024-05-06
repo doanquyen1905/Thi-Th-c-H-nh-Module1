@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 1; i <=20 ; i++) {
+        array.push(i);
+    }
+    console.log(array);
+    let sumChan = 0;
+    let sumLe = 0;
+    for (let j = 0; j <array.length ; j++) {
+        if (array[j] % 2 === 0 ){
+            sumChan = sumChan + array[j];
+        } else {
+            sumLe = sumLe + array[j];
+        }
+    }
+    console.log(sumChan);
+    console.log(sumLe);
+    let result = sumChan - sumLe;
+    console.log(result);
+</script>
+</body>
+</html>
